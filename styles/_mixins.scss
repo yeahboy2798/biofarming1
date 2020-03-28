@@ -1,0 +1,103 @@
+
+/*====colors======*/
+@mixin websiteGreenTextColor(){
+    color: rgba(9,228,102, 1);
+}
+
+@mixin websiteGreenBackgroundColor(){
+    background-color: rgba(9,228,102, 1);
+}
+
+@mixin websiteGreenBorderColor(){
+    border: 1px solid rgba(9,228,102, 1);
+}
+
+@mixin websiteGoldTextColor{
+    color: rgba(201,204,19, 1);
+}
+/*====colors======*/
+
+/*====elements======*/
+@mixin readMoreButton(){
+    height: 35px;
+            width: 100px;
+            @include websiteGreenBorderColor();
+            
+            border-radius: 5px;
+            @include flex(null, center,center);
+            
+            a{
+                @include websiteGreenTextColor();
+                
+            }
+    
+            &:hover{
+                @include websiteGreenBackgroundColor();
+                cursor: pointer;
+                a{
+                    color: white;
+                }
+    
+    
+            }
+}
+/*====end elements======*/
+
+
+
+/*====layouts===*/
+@mixin flex($direction: null, $align: null, $justify: null) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;   
+}
+
+/*====end layouts===*/
+
+/*======measurements=====*/
+
+@mixin heightCalc($hcalc){
+    height: calc((#{$hcalc}  - 4.5rem) / 7);
+}
+
+@mixin widthCalc($wcalc){
+    width: calc((#{$wcalc}  - 4.5rem) / 7);
+}
+
+@mixin marginCalc($mcalc-top: null, $mcalc-right: null, $mcalc-bottom: null, $mcalc-left: null){
+    margin-top: calc((#{$mcalc-top}  - 4.5rem) / 7);
+    margin-right: calc((#{$mcalc-right}  - 4.5rem) / 7);
+    margin-bottom: calc((#{$mcalc-bottom}  - 4.5rem) / 7);
+    margin-left: calc((#{$mcalc-left}  - 4.5rem) / 7);
+}
+
+@mixin fontCalc($fcalc){
+    font-size: calc((#{$fcalc} - 4.5rem) / 7);
+}
+
+@mixin heightAndWidthCalc($hcalc: null, $wcalc: null){
+    height: calc((#{$hcalc}  - 4.5rem) / 7);
+    width: calc((#{$wcalc}  - 4.5rem) / 7);
+}
+
+
+
+/*=====end measurements=====*/
+
+@mixin flexCenter($direction: null, $align: null, $justify: null) {
+    display: flex;
+    flex-direction: $direction;
+    align-items: $align;
+    justify-content: $justify;   
+}
+
+@mixin hoverNav(){
+    cursor: pointer;
+    color: white;
+}
+
+
+@mixin backgroundColor(){
+    background: green;
+}

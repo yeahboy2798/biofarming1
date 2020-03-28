@@ -1,0 +1,415 @@
+/*=========================GLOBAL STYLING===================================*/
+
+
+$nav-text-color : #8f94a8;
+$navbackground : #0d1326;
+$nav-texcolor: #8f94a8;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+}
+
+// html{
+//     scroll-behavior: smooth;
+//     height: auto;
+//     max-width: 1440px;
+//     margin: auto;
+// }
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;       
+    }
+}
+
+textarea{
+    resize: none;
+}
+
+
+
+.arrow-up{
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    background: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 20px;
+    right: 35px;
+    color: white;
+    font-size: 20px;
+    z-index: 5;
+    
+}
+
+
+/*=========================END GLOBAL STYLING===================================*/
+
+
+
+/*=========================MIXIN IMPORTS and variables===================================*/
+@import './breakpoints';
+@import './mixins';
+
+// @import './nav';
+// @import './index';
+// @import './about';
+// @import './gallery';
+// @import './single';
+/*=========================END MIXIN IMPORTS ===================================*/
+
+/*=========NORMAL 1440p==============*/
+.uppernav{
+    position: fixed;
+     z-index: 9999;
+     height: 45px;
+     width: 100%;
+     @include flexCenter(row, center, space-between);
+     background: $navbackground;
+ 
+     .glyphicon{
+         color: $nav-text-color;
+         font-size: 25px;
+     }
+ 
+     .download-container{
+         &:hover{
+             @include hoverNav();
+         }
+     }
+ 
+     .glyphicon-shopping-cart{
+         color: #4169e1;
+     }
+ 
+     .left-nav{
+         @include flexCenter(null, center);
+         height: 100%;
+         width: 5%;
+         display: flex;
+         justify-content: space-evenly;
+         margin: 10px;
+ 
+         .navtext{
+         
+             color: $nav-text-color;
+         }
+ 
+         
+ 
+         &:hover{
+             @include hoverNav();
+         }
+     }
+ 
+     .right-nav{
+ 
+         
+         height: 100%;
+         width: 20%;
+         @include flexCenter(null, center);
+         justify-content: space-evenly;
+        
+        
+         .navtext{
+             color: white;
+ 
+             &:hover{
+                 @include hoverNav();
+             }
+         }
+ 
+         .download-container{
+             @include flexCenter(null, center);
+             height: 100%;
+             width: 30%;
+ 
+             .navtext{
+                 margin: 20px;
+             }
+ 
+             &:hover{
+                 .glyphicon{
+                     @include hoverNav();
+                 }
+ 
+                 .navtext{
+                     @include hoverNav();
+                 }
+             }
+             
+         }
+ 
+ 
+     }    
+     
+ }
+/*========= end NORMAL 1440p==============*/
+
+@media only screen and (max-width: 2560px) {
+    .uppernav{
+        
+
+        
+        .left-nav{
+            width: 100px;
+        }
+
+        .right-nav{
+            width: 100px;
+            @include flex(null, center, flex-start);
+
+            .download-container{
+                width: 100px;
+
+            }
+
+            .buy-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 100px;
+            color: white
+            }
+        }
+    }  
+}
+
+@media only screen and (max-width: 1440px) {
+    .uppernav{
+        
+
+        
+        .left-nav{
+            width: 10%;
+        }
+
+        .right-nav{
+            width: 360px;
+            @include flex(null, center, space-around);
+
+            .download-container{
+                width: 10%;
+
+            }
+
+            .buy-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 35%;
+            color: white
+            }
+        }
+    }  
+}
+
+@media only screen and (max-width: 1024px) {
+    .uppernav{
+        position: fixed;
+         z-index: 9999;
+         height: 45px;
+         width: 100%;
+         @include flexCenter(row, center, space-between);
+         background: $navbackground;
+     
+         .glyphicon{
+             color: $nav-text-color;
+             font-size: 25px;
+         }
+     
+         .download-container{
+             &:hover{
+                 @include hoverNav();
+             }
+         }
+     
+         .glyphicon-shopping-cart{
+             color: #4169e1;
+         }
+     
+         .left-nav{
+             @include flexCenter(null, center);
+             height: 100%;
+             width: 5%;
+             display: flex;
+             justify-content: space-evenly;
+             margin: 10px;
+     
+             .navtext{
+             
+                 color: $nav-text-color;
+             }
+     
+             
+     
+             &:hover{
+                 @include hoverNav();
+             }
+         }
+     
+         .right-nav{
+     
+             
+             height: 100%;
+             width: 30%;
+             @include flexCenter(null, center);
+             justify-content: space-evenly;
+            
+            
+             .navtext{
+                 color: white;
+     
+                 &:hover{
+                     @include hoverNav();
+                 }
+             }
+     
+             .download-container{
+                 @include flexCenter(null, center);
+                 height: 100%;
+                 width: 30%;
+     
+                 .navtext{
+                     margin: 20px;
+                 }
+     
+                 &:hover{
+                     .glyphicon{
+                         @include hoverNav();
+                     }
+     
+                     .navtext{
+                         @include hoverNav();
+                     }
+                 }
+                 
+             }
+     
+     
+         }    
+         
+     } 
+}
+
+@media only screen and (max-width: 768px) {
+    .uppernav{
+        
+
+        .navtext{
+            display: none;
+        }
+
+        .buynow{
+            display: none;
+        }
+
+        .left-nav{
+            width: 30px;
+        }
+
+        .right-nav{
+            width: 90px;
+            @include flex(null, center, space-around);
+        }
+    }  
+}
+
+@media only screen and (max-width: 425px) {
+    .uppernav{
+        
+
+        .navtext{
+            display: none;
+        }
+
+        .buynow{
+            display: none;
+        }
+        .left-nav{
+            width: 30px;
+        }
+
+        .right-nav{
+            width: 90px;
+            @include flex(null, center, space-around);
+        }
+    }  
+}
+
+@media only screen and (max-width: 375px) {
+    .uppernav{
+        
+
+        .navtext{
+            display: none;
+        }
+
+        .buynow{
+            display: none;
+        }
+        .left-nav{
+            width: 30px;
+        }
+
+        .right-nav{
+            width: 90px;
+            @include flex(null, center, space-around);
+        }
+    }  
+}
+
+@media only screen and (max-width: 320px) {
+    .uppernav{
+        width: 100%;
+
+        .navtext{
+            display: none;
+        }
+        
+        .buynow{
+            display: none;
+        }
+
+        .left-nav{
+            width: 30px;
+        }
+
+        .right-nav{
+            width: 90px;
+            @include flex(null, center, space-around);
+
+            .buy-container{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                width: 35%;
+                color: white
+                }
+        }
+    }  
+    
+    
+}
+
+
+
+/*end media query nav*/
+
+
+
+
+/*=========================PAGES IMPORT STYLING===================================*/
+@import './page_styles/home.scss';
+/*=========================END PAGES IMPORT STYLING===================================*/
+
