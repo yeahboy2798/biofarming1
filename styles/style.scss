@@ -186,6 +186,7 @@ textarea{
 }
 
 @media only screen and (max-width: 1440px) {
+    /*nav*/
     .uppernav{
         
 
@@ -212,9 +213,230 @@ textarea{
             }
         }
     }  
+    /*end nav*/
+
+    /*Contact*/
+    .contact{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 450px;
+        @include whiteTextColor();
+        @include marginCalc(20vw);
+    
+        iframe{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    
+        }
+    
+        .contact-holder--full-size{
+        position: absolute;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        background: rgba(30,30,30, 0.6);
+        @include flex(column, center, center);
+
+        .full-size__contact-forms-container{
+            height: auto;
+            width: 70%;
+            @include flex(row, center, space-between);
+            
+        
+                .contact-forms-container__topleft{
+                    @include flex(column, null, space-around);
+                    height: 300px;
+                    width: 30%;
+
+                    .top-left__envelope-container{
+                        @include heightCalc(240vw);
+                        @include flex(column, center, center);
+                        .envelope-container-inside{
+                            @include heightCalc(80vw);
+                            @include flex(column, center, center);
+                            @include whiteTextColor();
+                            border: 3px solid rgba(255,255,255, 0.5);
+                            width: 100%;
+
+                            .glyphicon-envelope{
+                                @include fontCalc(20vw);
+                            }
+
+                            .newsletter-caption{
+                                @include fontCalc(15vw);
+                            }
+                        }
+
+                        
+                    }
+                    
+                    .top-left__forms-container{
+                        @include flex(column, center, space-evenly);
+                        @include heightCalc(170vw);
+
+                        .contact-text-input{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            @include heightCalc(25vw);
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+
+                        }
+
+                        .contact-text-input::placeholder {
+                        
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px;  
+                            margin-left: 10px;   
+                        }
+
+                        .contact-button{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            @include heightCalc(25vw);
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+                            @include websiteGreenBackgroundColor();
+                            width: 100%;
+                        }
+
+
+                    } 
+                }
+             
+                .contact-forms-container__middle {
+
+                    height: 280px;
+                    @include flex(column, center, space-between);
+                    width: 30%;
+
+                    .contact-text-input{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        @include heightCalc(25vw);
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+
+                        
+
+
+                    }
+
+                    .contact-text-input::placeholder {
+                    
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;   
+                    }
+
+                    textarea{
+                       width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                       height:120px;
+                    }
+
+                    textarea::placeholder{
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;
+                    }
+
+                    .contact-button{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        @include heightCalc(25vw);
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                        @include websiteGreenBackgroundColor();
+                        width: 100%;
+                    }
+
+                    
+                }
+
+                .contact-forms-container__lowright {
+                    width: 30%;
+                    height: 300px;
+                    @include flex(column, null, flex-start);
+                    
+
+                    .lowright--item{
+                        @include flex(null, center, flex-start);
+                        @include marginCalc(null, null, 30vw);
+
+                        .item__icon-container{
+                            width: 40px;
+                            .glyphicon{
+                                font-size: 30px;
+                            }
+    
+    
+                        }
+
+                        .item__info-container {
+                            width: 220px;
+                            @include flex(column);
+                            @include marginCalc(null, null, null, 30vw);
+                            .mail{
+                                color: rgb(251, 255, 0);
+
+                            }
+                        }
+                    }
+
+                    
+
+                }
+        
+            }
+        }
+    
+       
+    }
+    /*contact*/ 
+
+    /*start footer*/
+    .footer{
+        @include heightCalc(100vw);
+        @include flex(column, center, center);
+  
+        .social-icons-holder{
+          @include heightCalc(40vw);
+          width: 25%;
+          @include flex(row, center, space-around);
+        }
+  
+        .copyright-holder{
+          @include heightCalc(30vw);
+          width: 80%;
+          @include flex(row, center, space-around);
+          text-align: center;
+        }
+      }
+      /*end footer*/
 }
 
 @media only screen and (max-width: 1024px) {
+    /*nav*/
     .uppernav{
         position: fixed;
          z-index: 9999;
@@ -300,9 +522,230 @@ textarea{
          }    
          
      } 
+    /*end nav*/
+
+     /*Contact*/
+    .contact{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 450px;
+        @include whiteTextColor();
+        @include marginCalc(20vw);
+    
+        iframe{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    
+        }
+    
+        .contact-holder--full-size{
+        position: absolute;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        background: rgba(30,30,30, 0.6);
+        @include flex(column, center, center);
+
+        .full-size__contact-forms-container{
+            height: auto;
+            width: 90%;
+            @include flex(row, center, space-between);
+            
+        
+                .contact-forms-container__topleft{
+                    @include flex(column, null, space-around);
+                    height: 300px;
+                    width: 30%;
+
+                    .top-left__envelope-container{
+                        @include heightCalc(240vw);
+                        @include flex(column, center, center);
+                        .envelope-container-inside{
+                            @include heightCalc(125vw);
+                            @include flex(column, center, center);
+                            @include whiteTextColor();
+                            border: 3px solid rgba(255,255,255, 0.5);
+                            width: 100%;
+
+                            .glyphicon-envelope{
+                                @include fontCalc(40vw);
+                            }
+
+                            .newsletter-caption{
+                                @include fontCalc(20vw);
+                            }
+                        }
+
+                        
+                    }
+                    
+                    .top-left__forms-container{
+                        @include flex(column, center, space-evenly);
+                        @include heightCalc(170vw);
+
+                        .contact-text-input{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            @include heightCalc(35vw);
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+
+                        }
+
+                        .contact-text-input::placeholder {
+                        
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px;  
+                            margin-left: 10px;   
+                        }
+
+                        .contact-button{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            @include heightCalc(35vw);
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+                            @include websiteGreenBackgroundColor();
+                            width: 100%;
+                        }
+
+
+                    } 
+                }
+             
+                .contact-forms-container__middle {
+
+                    height: 300px;
+                    @include flex(column, center, space-between);
+                    width: 30%;
+
+                    .contact-text-input{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        @include heightCalc(35vw);
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+
+                        
+
+
+                    }
+
+                    .contact-text-input::placeholder {
+                    
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;   
+                    }
+
+                    textarea{
+                       width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                       height:150px;
+                    }
+
+                    textarea::placeholder{
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;
+                    }
+
+                    .contact-button{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        @include heightCalc(35vw);
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                        @include websiteGreenBackgroundColor();
+                        width: 100%;
+                    }
+
+                    
+                }
+
+                .contact-forms-container__lowright {
+                    width: 30%;
+                    height: 300px;
+                    @include flex(column, null, flex-start);
+                    
+
+                    .lowright--item{
+                        @include flex(null, center, flex-start);
+                        @include marginCalc(null, null, 50vw);
+
+                        .item__icon-container{
+                            width: 40px;
+                            .glyphicon{
+                                font-size: 30px;
+                            }
+    
+    
+                        }
+
+                        .item__info-container {
+                            width: 220px;
+                            @include flex(column);
+                            @include marginCalc(null, null, null, 30vw);
+                            .mail{
+                                color: rgb(251, 255, 0);
+
+                            }
+                        }
+                    }
+
+                    
+
+                }
+        
+            }
+        }
+    
+       
+    }
+    /*contact*/
+
+    /*start footer*/
+    .footer{
+        @include heightCalc(140vw);
+        @include flex(column, center, center);
+  
+        .social-icons-holder{
+          @include heightCalc(60vw);
+          width: 40%;
+          @include flex(row, center, space-around);
+        }
+  
+        .copyright-holder{
+          @include heightCalc(30vw);
+          width: 80%;
+          @include flex(row, center, space-around);
+          text-align: center;
+        }
+      }
+      /*end footer*/
 }
 
 @media only screen and (max-width: 768px) {
+    /*nav*/
     .uppernav{
         
 
@@ -323,9 +766,230 @@ textarea{
             @include flex(null, center, space-around);
         }
     }  
+    /*nav*/
+
+    /*Contact*/
+    .contact{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        height: 450px;
+        @include whiteTextColor();
+        @include marginCalc(40vw);
+    
+        iframe{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    
+        }
+    
+        .contact-holder--full-size{
+        position: absolute;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        background: rgba(30,30,30, 0.6);
+        @include flex(column, center, center);
+
+        .full-size__contact-forms-container{
+            height: auto;
+            width: 90%;
+            @include flex(row, center, space-between);
+            
+        
+                .contact-forms-container__topleft{
+                    @include flex(column, null, space-around);
+                    height: 300px;
+                    width: 30%;
+
+                    .top-left__envelope-container{
+                        @include heightCalc(240vw);
+                        @include flex(column, center, center);
+                        .envelope-container-inside{
+                            @include heightCalc(200vw);
+                            @include flex(column, center, center);
+                            @include whiteTextColor();
+                            border: 3px solid rgba(255,255,255, 0.5);
+                            width: 100%;
+
+                            .glyphicon-envelope{
+                                @include fontCalc(50vw);
+                            }
+
+                            .newsletter-caption{
+                                @include fontCalc(30vw);
+                            }
+                        }
+
+                        
+                    }
+                    
+                    .top-left__forms-container{
+                        @include flex(column, center, space-evenly);
+                        @include heightCalc(170vw);
+
+                        .contact-text-input{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            height: 32px;
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+
+                        }
+
+                        .contact-text-input::placeholder {
+                        
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px;  
+                            margin-left: 10px;   
+                        }
+
+                        .contact-button{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            height: 32px;
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+                            @include websiteGreenBackgroundColor();
+                            width: 100%;
+                        }
+
+
+                    } 
+                }
+             
+                .contact-forms-container__middle {
+
+                    height: 300px;
+                    @include flex(column, center, space-between);
+                    width: 30%;
+
+                    .contact-text-input{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+
+                        
+
+
+                    }
+
+                    .contact-text-input::placeholder {
+                    
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;   
+                    }
+
+                    textarea{
+                       width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                       height:150px;
+                    }
+
+                    textarea::placeholder{
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;
+                    }
+
+                    .contact-button{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                        @include websiteGreenBackgroundColor();
+                        width: 100%;
+                    }
+
+                    
+                }
+
+                .contact-forms-container__lowright {
+                    width: 30%;
+                    height: 300px;
+                    @include flex(column, null, flex-start);
+                    
+
+                    .lowright--item{
+                        @include flex(null, center, flex-start);
+                        @include marginCalc(null, null, 50vw);
+
+                        .item__icon-container{
+                            width: 40px;
+                            .glyphicon{
+                                font-size: 30px;
+                            }
+    
+    
+                        }
+
+                        .item__info-container {
+                            width: 220px;
+                            @include flex(column);
+                            @include marginCalc(null, null, null, 45vw);
+                            .mail{
+                                color: rgb(251, 255, 0);
+
+                            }
+                        }
+                    }
+
+                    
+
+                }
+        
+            }
+        }
+    
+       
+    }
+    /*contact*/
+
+    /*start footer*/
+    .footer{
+        @include heightCalc(160vw);
+        @include flex(column, center, center);
+  
+        .social-icons-holder{
+          @include heightCalc(60vw);
+          width: 55%;
+          @include flex(row, center, space-around);
+        }
+  
+        .copyright-holder{
+          @include heightCalc(50vw);
+          width: 80%;
+          @include flex(row, center, space-around);
+          text-align: center;
+        }
+      }
+      /*end footer*/
 }
 
 @media only screen and (max-width: 425px) {
+    /*nav*/
     .uppernav{
         
 
@@ -345,9 +1009,228 @@ textarea{
             @include flex(null, center, space-around);
         }
     }  
+    /*end nav*/
+
+    /*Contact*/
+    .contact{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        @include heightCalc(1240vw);
+        @include whiteTextColor();
+        @include marginCalc(80vw);
+    
+        iframe{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    
+        }
+    
+        .contact-holder--full-size{
+        position: absolute;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        background: rgba(30,30,30, 0.6);
+        @include flex(column, center, center);
+
+        .full-size__contact-forms-container{
+            height: auto;
+            width: 90%;
+            @include flex(column, center, center);
+            justify-content: space-evenly;
+        
+                .contact-forms-container__topleft{
+                    @include flex(column, null, space-around);
+                    height: 220px;
+                    width: 100%;
+
+                    .top-left__envelope-container{
+                        @include heightCalc(240vw);
+                        @include flex(column, center, center);
+                        .envelope-container-inside{
+                            @include heightCalc(200vw);
+                            @include flex(column, center, center);
+                            @include whiteTextColor();
+                            border: 3px solid rgba(255,255,255, 0.5);
+                            width: 100%;
+
+                            .glyphicon-envelope{
+                                @include fontCalc(65vw);
+                            }
+
+                            .newsletter-caption{
+                                @include fontCalc(50vw);
+                            }
+                        }
+
+                        
+                    }
+                    
+                    .top-left__forms-container{
+                        @include flex(column, center, space-evenly);
+                        @include heightCalc(170vw);
+
+                        .contact-text-input{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            height: 32px;
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+
+                        }
+
+                        .contact-text-input::placeholder {
+                        
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px;  
+                            margin-left: 10px;   
+                        }
+
+                        .contact-button{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            height: 32px;
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+                            @include websiteGreenBackgroundColor();
+                            width: 100%;
+                        }
+
+
+                    } 
+                }
+             
+                .contact-forms-container__middle {
+
+                    height: 275px;
+                    @include flex(column, center, space-evenly);
+                    width: 100%;
+
+                    .contact-text-input{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+
+                        
+
+
+                    }
+
+                    .contact-text-input::placeholder {
+                    
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;   
+                    }
+
+                    textarea{
+                       width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                       height:120px;
+                    }
+
+                    textarea::placeholder{
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;
+                    }
+
+                    .contact-button{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                        @include websiteGreenBackgroundColor();
+                        width: 100%;
+                    }
+
+                    
+                }
+
+                .contact-forms-container__lowright {
+                    width: 100%;
+                    height: 210px;
+                    @include flex(column, null, space-around);
+
+                    .lowright--item{
+                        @include flex(null, center, flex-start);
+
+                        .item__icon-container{
+                            width: 40px;
+                            .glyphicon{
+                                font-size: 30px;
+                            }
+    
+    
+                        }
+
+                        .item__info-container {
+                            width: 220px;
+                            @include flex(column);
+                            @include marginCalc(null, null, null, 60vw);
+                            .mail{
+                                color: rgb(251, 255, 0);
+
+                            }
+                        }
+                    }
+
+                    
+
+                }
+        
+            }
+        }
+    
+       
+    }
+    /*contact*/
+
+    /*start footer*/
+    .footer{
+        @include heightCalc(400vw);
+        @include flex(column, center, center);
+  
+        .social-icons-holder{
+          @include heightCalc(60vw);
+          width: 80%;
+          @include flex(row, center, space-around);
+        }
+  
+        .copyright-holder{
+          @include heightCalc(200vw);
+          width: 80%;
+          @include flex(row, center, space-around);
+          text-align: center;
+        }
+      }
+      /*end footer*/
 }
 
 @media only screen and (max-width: 375px) {
+    /*nav*/
     .uppernav{
         
 
@@ -367,9 +1250,229 @@ textarea{
             @include flex(null, center, space-around);
         }
     }  
+    /*end nav*/
+
+    /*Contact*/
+    .contact{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        @include heightCalc(1350vw);
+        @include whiteTextColor();
+        @include marginCalc(100vw);
+    
+        iframe{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    
+        }
+    
+        .contact-holder--full-size{
+        position: absolute;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        background: rgba(30,30,30, 0.6);
+        @include flex(column, center, center);
+
+        .full-size__contact-forms-container{
+            height: auto;
+            width: 90%;
+            @include flex(column, center, center);
+            justify-content: space-evenly;
+        
+                .contact-forms-container__topleft{
+                    @include flex(column, null, space-around);
+                    height: 190px;
+                    width: 100%;
+
+                    .top-left__envelope-container{
+                        @include heightCalc(240vw);
+                        @include flex(column, center, center);
+                        .envelope-container-inside{
+                            @include heightCalc(200vw);
+                            @include flex(column, center, center);
+                            @include whiteTextColor();
+                            border: 3px solid rgba(255,255,255, 0.5);
+                            width: 100%;
+
+                            .glyphicon-envelope{
+                                @include fontCalc(65vw);
+                            }
+
+                            .newsletter-caption{
+                                @include fontCalc(50vw);
+                            }
+                        }
+
+                        
+                    }
+                    
+                    .top-left__forms-container{
+                        @include flex(column, center, space-between);
+                        @include heightCalc(170vw);
+
+                        .contact-text-input{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            height: 32px;
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+
+                        }
+
+                        .contact-text-input::placeholder {
+                        
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px;  
+                            margin-left: 10px;   
+                        }
+
+                        .contact-button{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            height: 32px;
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+                            @include websiteGreenBackgroundColor();
+                            width: 100%;
+                        }
+
+
+                    } 
+                }
+             
+                .contact-forms-container__middle {
+
+                    height: 275px;
+                    @include flex(column, center, space-evenly);
+                    width: 100%;
+
+                    .contact-text-input{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+
+                        
+
+
+                    }
+
+                    .contact-text-input::placeholder {
+                    
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;   
+                    }
+
+                    textarea{
+                       width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                       height:120px;
+                    }
+
+                    textarea::placeholder{
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;
+                    }
+
+                    .contact-button{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                        @include websiteGreenBackgroundColor();
+                        width: 100%;
+                    }
+
+                    
+                }
+
+                .contact-forms-container__lowright {
+                    width: 100%;
+                    height: 210px;
+                    @include flex(column, null, space-around);
+
+                    .lowright--item{
+                        @include flex(null, center, flex-start);
+
+                        .item__icon-container{
+                            width: 40px;
+                            .glyphicon{
+                                font-size: 30px;
+                            }
+    
+    
+                        }
+
+                        .item__info-container {
+                            width: 220px;
+                            @include flex(column);
+                            @include marginCalc(null, null, null, 50vw);
+                            .mail{
+                                color: rgb(251, 255, 0);
+
+                            }
+                        }
+                    }
+
+                    
+
+                }
+        
+            }
+        }
+    
+       
+    }
+    /*contact*/
+
+    /*start footer*/
+    .footer{
+        @include heightCalc(400vw);
+        @include flex(column, center, center);
+  
+        .social-icons-holder{
+          @include heightCalc(60vw);
+          width: 80%;
+          @include flex(row, center, space-around);
+        }
+  
+        .copyright-holder{
+          @include heightCalc(200vw);
+          width: 80%;
+          @include flex(row, center, space-around);
+          text-align: center;
+        }
+      }
+      /*end footer*/
+    
 }
 
 @media only screen and (max-width: 320px) {
+    /*nav*/
     .uppernav{
         width: 100%;
 
@@ -398,15 +1501,227 @@ textarea{
                 }
         }
     }  
+    /*nav*/
+
+    /*Contact*/
+      .contact{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        position: relative;
+        @include heightCalc(1600vw);
+        @include whiteTextColor();
+        @include marginCalc(80vw);
     
+        iframe{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    
+        }
+    
+        .contact-holder--full-size{
+        position: absolute;
+        z-index: 3;
+        height: 100%;
+        width: 100%;
+        background: rgba(30,30,30, 0.6);
+        @include flex(column, center, center);
+
+        .full-size__contact-forms-container{
+            height: auto;
+            width: 90%;
+            @include flex(column, center, center);
+            justify-content: space-evenly;
+        
+                .contact-forms-container__topleft{
+                    @include flex(column, null, space-around);
+                    height: 190px;
+                    width: 100%;
+
+                    .top-left__envelope-container{
+                        @include heightCalc(240vw);
+                        @include flex(column, center, center);
+                        .envelope-container-inside{
+                            @include heightCalc(200vw);
+                            @include flex(column, center, center);
+                            @include whiteTextColor();
+                            border: 3px solid rgba(255,255,255, 0.5);
+                            width: 100%;
+
+                            .glyphicon-envelope{
+                                @include fontCalc(65vw);
+                            }
+
+                            .newsletter-caption{
+                                @include fontCalc(50vw);
+                            }
+                        }
+
+                        
+                    }
+                    
+                    .top-left__forms-container{
+                        @include flex(column, center, space-between);
+                        @include heightCalc(170vw);
+
+                        .contact-text-input{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            height: 32px;
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+
+                        }
+
+                        .contact-text-input::placeholder {
+                        
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px;  
+                            margin-left: 10px;   
+                        }
+
+                        .contact-button{
+                            width: 100%;
+                            border: none;
+                            background: rgba(255,255,255, 0.3);
+                            height: 32px;
+                            color: rgba(255,255,255, 0.8); 
+                            font-size: 14px; 
+                            text-indent: 10px;
+
+                            @include websiteGreenBackgroundColor();
+                            width: 100%;
+                        }
+
+
+                    } 
+                }
+             
+                .contact-forms-container__middle {
+
+                    height: 275px;
+                    @include flex(column, center, space-evenly);
+                    width: 100%;
+
+                    .contact-text-input{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+
+                        
+
+
+                    }
+
+                    .contact-text-input::placeholder {
+                    
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;   
+                    }
+
+                    textarea{
+                       width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                       height:120px;
+                    }
+
+                    textarea::placeholder{
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px;  
+                        margin-left: 10px;
+                    }
+
+                    .contact-button{
+                        width: 100%;
+                        border: none;
+                        background: rgba(255,255,255, 0.3);
+                        height: 32px;
+                        color: rgba(255,255,255, 0.8); 
+                        font-size: 14px; 
+                        text-indent: 10px;
+                        @include websiteGreenBackgroundColor();
+                        width: 100%;
+                    }
+
+                    
+                }
+
+                .contact-forms-container__lowright {
+                    width: 100%;
+                    height: 210px;
+                    @include flex(column, null, space-around);
+
+                    .lowright--item{
+                        @include flex(null, center, flex-start);
+
+                        .item__icon-container{
+                            width: 40px;
+                            .glyphicon{
+                                font-size: 30px;
+                            }
+    
+    
+                        }
+
+                        .item__info-container {
+                            width: 220px;
+                            @include flex(column);
+                            @include marginCalc(null, null, null, 50vw);
+                            .mail{
+                                color: rgb(251, 255, 0);
+
+                            }
+                        }
+                    }
+
+                    
+
+                }
+        
+            }
+        }
+    
+       
+    }
+    /*contact*/
+
+    /*start footer*/
+    .footer{
+      @include heightCalc(500vw);
+      @include flex(column, center, center);
+
+      .social-icons-holder{
+        @include heightCalc(200vw);
+        width: 80%;
+        @include flex(row, center, space-around);
+      }
+
+      .copyright-holder{
+        @include heightCalc(200vw);
+        width: 80%;
+        @include flex(row, center, space-around);
+        text-align: center;
+      }
+    }
+    /*end footer*/
     
 }
-
-
-
-/*end media query nav*/
-
-
+/*end media query nav, about and footer*/
 
 
 /*=========================PAGES IMPORT STYLING===================================*/
