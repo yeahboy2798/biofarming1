@@ -1,0 +1,106 @@
+/*====colors======*/
+/*========Texts mixins================*/
+/*==========background mixins=======*/
+/*==========border mixins========*/
+/*====colors======*/
+/*====elements======*/
+/*====end elements======*/
+/*====layouts===*/
+/*====end layouts===*/
+/*======measurements=====*/
+/*=====end measurements=====*/
+.gallery {
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .gallery .gallery-full {
+    height: 100%;
+    width: 100%;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .gallery .gallery-full .h1-container {
+      font-size: 50px;
+      color: #09e466; }
+    .gallery .gallery-full .gallery-full__center-div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      width: 100%; }
+      .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder {
+        width: 1070px; }
+        .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder {
+          display: inline-block;
+          height: 230px;
+          width: 30%;
+          margin: 15px;
+          border: 1px solid rgba(13, 19, 38, 0.13); }
+          .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder .img-holder-flex {
+            height: 100%;
+            width: 100%;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center; }
+            .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder .img-holder-flex img {
+              height: 93%;
+              width: 95%; }
+  @media only screen and (max-width: 1100px) {
+    .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder {
+      width: 900px; }
+      .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder {
+        width: 29.7%; } }
+  @media only screen and (max-width: 1024px) {
+    .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder {
+      width: 900px; }
+      .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder {
+        width: 29.7%; } }
+  @media only screen and (max-width: 920px) {
+    .gallery {
+      height: 680px; }
+      .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder {
+        width: 740px; }
+        .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder {
+          width: 28.93%;
+          height: 145px; } }
+  @media only screen and (max-width: 768px) {
+    .gallery {
+      height: 680px; }
+      .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder {
+        width: 740px; }
+        .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder {
+          width: 28.93%;
+          height: 145px; } }
+  @media only screen and (max-width: 767px) {
+    .gallery {
+      height: 1000px; }
+      .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder {
+        width: 400px; }
+        .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder {
+          width: 42%;
+          height: 145px; } }
+  @media only screen and (max-width: 425px) {
+    .gallery {
+      height: 1000px; }
+      .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder {
+        width: 400px; }
+        .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder {
+          width: 42%;
+          height: 145px; } }
+  @media only screen and (max-width: 424px) {
+    .gallery {
+      height: 1700px; }
+      .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder {
+        width: 300px; }
+        .gallery .gallery-full .gallery-full__center-div .center-div__image-grid-holder .gallery-img-holder {
+          width: 92%;
+          height: 145px; } }
+
+/*# sourceMappingURL=gallery.css.map */

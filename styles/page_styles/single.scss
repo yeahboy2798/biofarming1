@@ -1,0 +1,450 @@
+@import '../mixins/';
+
+.single{
+    height: auto;
+    width: 100%;
+    @include flex(null, center, center);
+    margin-bottom: 100px;
+
+    .single__center{
+
+    }
+
+    .center-h1-container{
+        @include heightAndWidth(240px);
+        @include flex(null, center, center);
+       
+    }
+
+    .h1-title {
+        @include sectionTitleH1();
+    }
+
+
+    /*main container to hold right and left*/
+    .center__left-right-container{
+        height: auto;
+        width: 1120px;
+        
+        
+        @include flex(row, center, space-between);
+    }
+
+    .center-left{
+        height: 100%;
+        width: 710px;
+       
+
+        .left-caption-top-container{
+            @include heightAndWidth(100px);
+            @include flex(null, center, flex-start);
+            width: 100%;
+            font-size: 25px;
+
+        }
+
+        .left-img-box{
+            @include heightAndWidth(400px, 100%);
+            
+            .img-top-container {
+                /*the golden yellow color*/
+                @include websiteGoldBackColor;
+                @include heightAndWidth(70px);
+                @include flex(null, center);
+
+                .top-container-innner{
+                    @include heightAndWidth(100%, 50%);
+                    @include flex(null, center, space-around);
+                    margin-left: 50px;
+                }
+
+                .glyph-text{
+                    margin: 5px;
+                }
+            }
+
+            .img-container img{
+                height: 100%;
+                width: 100%;
+            }
+        }
+
+        .left__p-container{
+            @include websiteGrayTextColor();
+        }
+
+        .p-container-quote{
+            font-size: 23px;
+            color: black;
+        }
+
+        .left-yellow-div{
+            @include heightAndWidth(240px, 100%);
+            @include websiteGoldBackColor();
+            @include flex(null, center, center);
+
+
+            .yellow-div-inner{
+                @include heightAndWidth(90%, 90%);
+                @include flex(null, center, space-between);
+                
+                .inner__img-container{
+                    
+                }
+
+                .inner__texts-container{
+                    width: 415px;
+                    @include flex(column, null);
+                    height:100%;
+
+                    .text-name{
+                        color: white;
+                        font-size: 35px;
+                    }
+
+                    span.text-caption {
+                        margin-top: 15px;
+                        margin-bottom: 50px;
+                    }
+
+                    a{
+                        @include whiteTextColor();
+                    }
+                }
+
+            }
+        }
+
+        .left_reply-container {
+            height: auto;
+            @include flex(column);
+
+            .h1-container{
+                height: 65px;
+                @include flex(null, flex-end);
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+
+            .input {
+                height: 50px;
+                text-indent: 15px;
+                margin-bottom: 11px;
+                border: 1px solid rgba(15, 7, 0, 0.1);
+
+            }
+
+            .name-email-container{
+                @include flex(null, center, space-between);
+                .name-email{
+                    @extend .input;
+                    width: 350px;
+                    display: inline-block;
+
+                }
+            }
+
+            textarea{
+                @extend .input;
+                height: 190px;
+            }
+
+            .buttons-container{
+                @extend .name-email-container;
+
+                .buttons{
+                    @extend .input;
+                    width: 350px;
+                    display: inline-block;
+
+                    @include websiteGreenBackgroundColor();
+                    @include whiteTextColor();
+                    border: none;
+                }
+            }
+
+            
+
+        }
+        
+    }
+        
+    
+
+    .center-right{
+        height: 1400px; 
+        width: 370px;
+
+        .tags-main-box{
+            margin-bottom: 35px;
+            .box-inline{
+                display: inline-block;
+                width: auto;
+                margin-right: 5px;
+                margin-bottom: 10px;
+
+                .tag-flex{
+                    height: 35px;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border: 1px solid gray;
+                    padding: 20px;
+
+                    span{
+                        color: rgba(15, 7, 0, 0.3);
+                    }
+                }
+            }
+        }
+
+        .post-items-container{
+            margin-bottom: 35px;
+            .posts-items {
+                height: 75px;
+                @include flex(column, flex-start, space-evenly);
+                color: #15bb5b;
+                border-bottom: 1px dashed rgba(15, 7, 0, 0.2);
+    
+                a{
+                    color: rgba(15, 7, 0, 0.5);
+                }
+    
+               
+            }
+        }
+
+        .categories-item-container{
+            .right_category-item {
+                height: 60px;
+                @include flex(null, center);
+                border-bottom: 1px dashed rgba(15, 7, 0, 0.3);
+                
+                a{
+                    color: rgba(15, 7, 0, 0.5);
+                }
+            }
+        }
+
+        .right__instagram-container{
+            display: block;
+            .instagram-container__img-grid{
+                display: block;
+                margin: 0;
+                
+                img{
+                    width: 120px;
+                    height: 80px;
+                }
+            }
+        }
+
+        
+    }
+
+
+    /*media queries*/
+
+    @media only screen and (max-width: 1208px){
+        .center__left-right-container{
+            width: 940px;
+
+            .left-caption-top-container{
+                font-size: 20px;
+            }
+
+            .center-left {
+                height: 100%;
+                width: 615px;
+                
+                .left-caption-top-container{
+                    width: 100%;
+                }
+            }
+
+            .center-right {
+                height: 1410px;
+                width: 290px;
+
+                .tag-flex{
+                    height: 30px;
+                    padding: 10px;
+                }
+            }
+        }
+
+
+        .center-left .left-img-box .img-top-container .top-container-innner{
+            width: 360px;
+        }
+
+        .center-right .tags-main-box .box-inline .tag-flex {
+            height: 35px;
+            padding: 10px;
+        }
+
+        .right-h3-container.h3top {
+            margin-bottom: 35px;
+        }
+
+
+        .center-left .left-yellow-div {
+            height: 200px;
+
+            img{
+                height: 160px;
+            }
+        }
+
+        .center-left .left-yellow-div .yellow-div-inner .inner__texts-container {
+            width: 370px;
+        }
+        
+        .center-left .left-yellow-div .yellow-div-inner .inner__texts-container span.text-caption{
+            margin-bottom: 30px;
+        }
+
+        .center-right .right__instagram-container .instagram-container__img-grid img {
+            width: 94px;
+            height: 70px;
+        }
+    }
+
+    @media only screen and (max-width: 1023px){
+        .center-h1-container {
+            height: 120px;
+        }
+
+        .center__left-right-container {
+            width: 645px;
+            @include flex(column);
+
+            .center-left {
+               
+                .left-caption-top-container {
+                    height: 55px;
+                }
+
+                .left-img-box .img-top-container{
+                    height: 55px;
+                }
+
+                .left_reply-container{
+                    .name-email-container{
+                      
+                        .input{
+                            width: 305px;
+                            height: 40px;
+        
+                        }
+                    }
+
+                    .telephone{
+                        height: 40px;
+                    }
+                }
+                
+            }
+
+            .center-right{
+                width: 615px;
+                height: 1200px;
+
+                .tags-main-box {
+                    width: 265px;
+                }
+
+                .instagram-container__img-grid {
+                    width: 300px;
+                    
+                }
+            }
+
+        }
+
+        
+
+       
+    }
+
+    @media only screen and (max-width: 645px){
+        .center__left-right-container{
+            width: 100%;
+        }
+        
+        .center__left-right-container .center-left {
+            height: 100%;
+            width: 90%;
+
+
+            .left_reply-container{
+                .name-email-container{
+                    .input{
+                        width: 49.5%;
+                    }
+                }
+            }
+        }
+
+        .center__left-right-container .center-right{
+            width: 90%;
+        }
+
+        .center__left-right-container .center-right .tags-main-box {
+            width: 60%;
+        }
+
+        .center-left .left-yellow-div .yellow-div-inner .inner__texts-container {
+            width: 60%;
+        }
+
+        .center-left .left-yellow-div {
+            height: auto;
+        }
+
+        .inner__img-container {
+            height: 90%;
+            width: 35%;
+        }
+
+        .center-left .left-yellow-div img {
+            @include heightCalc(175vw);
+        }
+
+        .center-left .left-yellow-div .yellow-div-inner .inner__texts-container span.text-caption {
+            margin-bottom: 20px;
+        }
+
+        
+    }
+
+    @media only screen and (max-width: 480px){
+        .center-left .left-img-box{
+            height: auto;
+        }
+
+        .single__center {
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 425px){
+        margin-bottom: 160px;
+    }
+
+    
+    @media only screen and (max-width: 375px){
+        margin-bottom: 160px;
+    }
+
+    @media only screen and (max-width: 320px){
+        margin-bottom: 155px;
+    }
+
+    
+
+
+}
+

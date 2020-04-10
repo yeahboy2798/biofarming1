@@ -1,0 +1,145 @@
+@import '../mixins/';
+
+.gallery{
+    height: 1000px;
+    @include flex(column, center, center);
+
+    .gallery-full{
+       @include heightAndWidth(100%, 100%);
+       @include flex(column, center, center);
+       
+       .h1-container{
+        @include sectionTitleH1();
+        }
+
+        .gallery-full__center-div{
+            @include flex(column, center, space-evenly);
+           
+            width: 100%;
+
+            .center-div__image-grid-holder {
+                width: 1070px;
+
+                .gallery-img-holder{
+                    display: inline-block;
+                    height: 230px;
+                    width: 30%;
+                    margin: 15px;
+                    border: 1px solid rgba(13,19,38, 0.13);
+                    
+                    .img-holder-flex{
+                        @include heightAndWidth(100%, 100%);
+                        @include flex(null, center, center);
+                        img{
+                            height: 93%;
+                            width: 95%;
+                        }
+                    }
+    
+                    
+                }
+            }
+
+            
+        }
+    }
+
+    @media only screen and (max-width: 1100px){
+       
+
+        .gallery-full .gallery-full__center-div .center-div__image-grid-holder{
+            width: 900px;
+
+            .gallery-img-holder {
+                width: 29.7%;
+            }
+        }    
+        
+    }
+
+    @media only screen and (max-width: 1024px){
+       
+
+        .gallery-full .gallery-full__center-div .center-div__image-grid-holder{
+            width: 900px;
+
+            .gallery-img-holder {
+                width: 29.7%;
+            }
+        }    
+        
+    }
+
+    @media only screen and (max-width: 920px){
+        height: 680px;
+        .gallery-full .gallery-full__center-div .center-div__image-grid-holder{
+            width: 740px;
+
+            .gallery-img-holder {
+                width: 28.93%;
+                height: 145px;
+            }
+        }  
+
+
+    }
+
+    @media only screen and (max-width: 768px){
+        height: 680px;
+        .gallery-full .gallery-full__center-div .center-div__image-grid-holder{
+            width: 740px;
+
+            .gallery-img-holder {
+                width: 28.93%;
+                height: 145px;
+            }
+        }  
+
+
+    }
+
+    @media only screen and (max-width: 767px){
+        height: 1000px;
+        .gallery-full .gallery-full__center-div .center-div__image-grid-holder{
+            width: 400px;
+
+            .gallery-img-holder {
+                width: 42%;
+                height: 145px;
+            }
+        }  
+
+
+    }
+
+    @media only screen and (max-width: 425px){
+        height: 1000px;
+        .gallery-full .gallery-full__center-div .center-div__image-grid-holder{
+            width: 400px;
+
+            .gallery-img-holder {
+                width: 42%;
+                height: 145px;
+            }
+        }  
+
+
+    }
+
+    @media only screen and (max-width: 424px){
+        height: 1700px;
+        .gallery-full .gallery-full__center-div .center-div__image-grid-holder{
+            width: 300px;
+
+            .gallery-img-holder {
+                width: 92%;
+                height: 145px;
+            }
+        }  
+
+
+    }
+
+
+}
+

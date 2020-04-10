@@ -9,13 +9,32 @@
     color: rgba(201,204,19, 1);
 }
 
+@mixin websiteGrayTextColor(){
+    color: rgb(153,153,153);
+}
+
 @mixin whiteTextColor(){
     color: white;
 }
 
+@mixin websiteYellowColor(){
+    color: rgb(251,255,0); 
+}
+
+
+
 /*==========background mixins=======*/
 @mixin websiteGreenBackgroundColor(){
     background-color: rgba(9,228,102, 1);
+
+}
+
+@mixin websiteYellowBackColor(){
+    backgrounf: rgb(251,255,0); 
+}
+
+@mixin websiteGoldBackColor{
+    background: rgba(201,204,19, 1);
 }
 
 /*==========border mixins========*/
@@ -48,6 +67,11 @@
     
     
             }
+}
+
+@mixin sectionTitleH1(){
+    font-size: 50px;
+    @include websiteGreenTextColor();
 }
 /*====end elements======*/
 
@@ -94,6 +118,13 @@
 @mixin heightAndWidthCalc($hcalc: null, $wcalc: null){
     height: calc((#{$hcalc}  - 4.5rem) / 7);
     width: calc((#{$wcalc}  - 4.5rem) / 7);
+}
+
+@mixin heightAndWidth($height: null, $width: null){
+    height: 100%;
+    width: 100%;
+    height: $height;
+    width: $width;
 }
 
 
